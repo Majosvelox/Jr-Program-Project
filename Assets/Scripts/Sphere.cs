@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cylinder : Shape
-      
+public class Sphere : Shape
+
 {
-    
+
     void Update()
     {
         ChangeColor();
@@ -19,17 +19,19 @@ public class Cylinder : Shape
             //RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.name == "Cylinder")
+                if (hit.transform.name == "Sphere")
                 {
-                    colorStart = Color.yellow;
+                    colorStart = Color.green;
                     rend.material.color = colorStart;
-                    Debug.Log(" You change the color of the Shape, the new color is Yellow. ");
+                    Debug.Log(" You change the color of the Shape, the new color is Green. ");
 
                 }
 
             }
         }
     }
+}
     
    
-}
+
+

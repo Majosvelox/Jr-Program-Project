@@ -5,8 +5,8 @@ using UnityEngine;
 public class Shape : MonoBehaviour
 {
     // Start is called before the first frame update
-    Color colorStart;
-    Renderer rend;
+    public Color colorStart;
+    public Renderer rend;
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -20,7 +20,7 @@ public class Shape : MonoBehaviour
         ChangeColor();
 
     }
-        public void ChangeColor() {
+       public virtual void ChangeColor() {
             if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
